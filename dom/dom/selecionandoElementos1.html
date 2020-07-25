@@ -10,7 +10,24 @@
     <div>Segundo</div>
     <div class="terceiro ultimo">.terceiro .ultimo</div>
     <script>              
-        document.getElementById('primeiro') // selecionando elemento por ID
+        document.getElementById('primeiro').classList.add('destaque')
+         // selecionando elemento HTML por ID // adicionando class css ao alemento selecionado
+
+        const divs = document.getElementsByTagName('div') 
+         // selecionando *todos* elementos HTML que tenha o nome div
+        Array.from(divs) // transforma o HTML colection selecionando em array.
+        Array.from(divs).forEach( e => e.classList.remove('destaque'));
+
+        const divsArray = [...divs] // transoformando os elementos através do aperador 
+        //spreed em um array 
+        divsArray.forEach(e => e.classList.add('destaque'));
+
+        const ultimos =  document.getElementsByClassName('ultimo'); // selecionando elementos pela class
+
+        const ultimosRemove = [...ultimos]; // trans formando o HTML colletion em array
+
+        ultimosRemove.forEach(e => e.classList.remove('destaque')) // removendo a class destaque que contém ultimo
+
     </script>
 </body>
 </html>
