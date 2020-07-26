@@ -10,7 +10,21 @@
     <div>Segundo</div>
     <div class="terceiro ultimo"><span wb-attrib>.terceiro .ultimo</span></div>
     <script>              
-        // ...
+
+        document.querySelector('#primeiro').classList.add('destaque')
+        // para selecionar o elemeto pelo ID deve-se adicionar o # .
+
+        const selecionar = seletor => 
+            document.querySelectorAll(seletor)
+                .forEach(e => e.classList.add('destaque'));
+        // funcao para add a class distaque aos elementos 
+
+        const desSelecionar = seletor =>
+             document.querySelectorAll(seletor)
+                .forEach(e => e.classList.remove('destaque'));
+
+     selecionar('div')
+    desSelecionar('*')
     </script>
 </body>
 </html>
