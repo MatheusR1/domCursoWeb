@@ -31,7 +31,14 @@
         <button>Pesquisar</button>
     </form>
     <script>
-        // ...
+        console.log (document.forms) // pega todos os form, em forma de HTML collection
+        console.log(document.forms[0])
+        console.log(document.getElementsByName('pesquisa')) // encontra o elemento com o atrib. name especificado, trás nodeList 
+        console.log(document.getElementsByTagName('pesquisa')) // pesquisa pela tag e tras nodeList
+        console.log(document.pesquisa) // vai procurar o elemento que tem o nome pesquisa
+        console.log(document.pesquisa.q)// entra no form e pega o input de name q
+        document.pesquisa.q.value= 'Linux'; // posso acessar e modificar os campos através dos nomes
+        console.log(document.pesquisa.hl.selectedIndex)
     </script>
 </body>
 
