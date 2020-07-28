@@ -15,7 +15,26 @@
         <img src='http://files.cod3r.com.br/curso-web/logo-estreita.png' alt='logo'>
     </div>
     <script>
-        // ...
+
+
+        // selecionando uma tag com querySelector => 'img' 
+        // selecionando uma class com querySelector =>'.img'
+        //selecionando uma id com querySelector  =>'#img'
+        // selecionando uma propriedade com querySelector =>'[img]'
+        const img = document.querySelector('img')
+
+        console.log('getAttribute', img.getAttribute('src')) 
+        // ACESSAR o atributo através da tag img
+        console.log('src', img.src)
+        // outra forma de acessar o atributo
+        console.log('alt',img.alt)
+
+        console.log('elemento img .............................')
+
+        console.log('nodeType', img.nodeType)
+        // saber oq é cada coisa, node type, define através da enumeração o tipo da coisa.
+        console.log('nodeName', img.nodeName) 
+
     </script>
 </body>
 

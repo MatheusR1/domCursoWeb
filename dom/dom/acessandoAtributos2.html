@@ -17,7 +17,16 @@
         </ul>
     </div>
     <script>
-        // ...
+        const lista= document.querySelector('div ul[destino=escritório]');
+
+        console.log('ul.....................');
+        console.log('childNodes',lista.childNodes);
+        console.log('destino', lista.destino); // nao consigo ler através atribuitos feitos por min
+        console.log('getAttribute', lista.getAttribute('destino')); // ler o conteúdo do atributo
+        console.log('hasAttribute', lista.hasAttribute('destino')); // checarse existe
+        lista.setAttribute('destino','buceta') // setar o atribuito
+        lista.removeAttribute('destino')    // se nao tiver, posso atribuir um atributo haha
+
     </script>
 </body>
 
