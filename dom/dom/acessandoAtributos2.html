@@ -27,6 +27,14 @@
         lista.setAttribute('destino','buceta') // setar o atribuito
         lista.removeAttribute('destino')    // se nao tiver, posso atribuir um atributo haha
 
+
+
+        // cuidado 
+        const label = document.querySelector('label');
+
+        console.log(label.for) // nao consigo ter acesso, porq for é um palavra reservada
+        console.log(label.htmlFor) // html consigo ter acesso
+        console.log(label.getAttribute('for')) // tbm consigo ter acesso ao atributo for
     </script>
 </body>
 

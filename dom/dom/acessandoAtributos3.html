@@ -16,7 +16,15 @@
         </ul>
     </div>
     <script>
-        // ...
+        const lista = document.querySelector('#compras')
+
+        // somente leitura 
+        // formas de ter acesso aos atributos personalisados
+        console.log(lista.attributes);
+        console.log(lista.attributes[0]);
+        console.log(lista.attributes.destino);
+        console.log(lista.attributes['data-urgencia']) 
+        // nestr caso preciso usar assim, porq o indentificador nao é válido para o js
     </script>
 </body>
 
