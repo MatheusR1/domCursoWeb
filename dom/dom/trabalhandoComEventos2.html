@@ -10,6 +10,19 @@
 <body class="conteudo exercicio">
     <div>Elemento</div>
     <script>
-        // ...
+        const div = document.querySelector('div')
+        
+        div.style.position = 'absolute'
+
+        div.onmousemove= e =>{
+            const item = e.target // div q disparou o evento 
+            item.style.cursor= 'pointer'
+            
+            if (e.buttons){ // se for diferente de zero, ou seja true, alguem deu click no mouse 
+                item.style.top= `${e.clientY- (item.clientHeight / 2)}px` // distancia da div para o topo eixo X
+                item.style.left= `${e.clientX- (item.clientWidth / 2)}px`// distancia da div para a leateal eixo Y
+            }   
+        }
+
     </script>
 </body>

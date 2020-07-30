@@ -9,9 +9,34 @@
 
 <body class="conteudo exercicio">
     <div>
-        <a href="https://google.com.br">Google</a>
+        <a espera-5 href="https://google.com.br"> Google</a> 
+        <!-- passando evento para o link  onclick="navegaEm5s(event)">-->
     </div>
     <script>
-        // ...
+
+        function navegaEm5s(e){ // interceptando o evento. 
+            e.preventDefault() // paradando o comportamento padrao do evento de click 
+
+            console.log('Saindo em 5');
+
+            setTimeout (() => {
+                const link = e.target
+                window.location.href = link.href
+                // alterando o endereço da janela para o do link 
+            },5000)
+        }
+
+        // selecionando o elemento a para aplicar a função navegar em 5
+
+        // const a = document.querySelector('a')
+
+        // a.onclick= navegaEm5s
+
+        // é mais interessante trabalhar com atributos com JS
+        
+        const attribute = document.querySelector('[espera-5]')
+
+        attribute.onclick = navegaEm5s
+
     </script>
 </body>
